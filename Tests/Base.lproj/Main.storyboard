@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Tests" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="smq-J4-Ilh">
+                                <rect key="frame" x="20" y="176" width="374" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="emailActionField:" destination="BYZ-38-t0r" eventType="editingChanged" id="VEa-bx-XGK"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tca-Cq-f3U">
+                                <rect key="frame" x="20" y="235" width="374" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="passwordActionField:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="pmP-51-H5F"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="opV-q0-HIK">
+                                <rect key="frame" x="142" y="343" width="130" height="30"/>
+                                <state key="normal" title="Войти"/>
+                                <connections>
+                                    <action selector="actionButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xKM-cM-UGV"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="opV-q0-HIK" secondAttribute="trailing" constant="142" id="3mw-f6-Zsg"/>
+                            <constraint firstItem="opV-q0-HIK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="142" id="Bj3-Zm-amM"/>
+                            <constraint firstItem="smq-J4-Ilh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="F5h-og-63C"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="smq-J4-Ilh" secondAttribute="trailing" constant="20" id="IOU-Ib-Qzf"/>
+                            <constraint firstItem="tca-Cq-f3U" firstAttribute="top" secondItem="smq-J4-Ilh" secondAttribute="bottom" constant="25" id="QJl-va-yjE"/>
+                            <constraint firstItem="opV-q0-HIK" firstAttribute="top" secondItem="tca-Cq-f3U" secondAttribute="bottom" constant="74" id="aNj-AQ-xRv"/>
+                            <constraint firstItem="smq-J4-Ilh" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="132" id="hEG-su-w3u"/>
+                            <constraint firstItem="tca-Cq-f3U" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="pOe-yj-8cn"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="tca-Cq-f3U" secondAttribute="trailing" constant="20" id="vlM-ac-DVG"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="emailTextField" destination="smq-J4-Ilh" id="j3Q-rf-zdu"/>
+                        <outlet property="outletButton" destination="opV-q0-HIK" id="9Ex-f5-M5N"/>
+                        <outlet property="passwordTextField" destination="tca-Cq-f3U" id="gFi-DQ-36m"/>
+                        <segue destination="PVF-ci-YvH" kind="show" identifier="congratulationsVC" id="PdL-bf-PZa"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="126.5625"/>
+        </scene>
+        <!--Congratulation View Controller-->
+        <scene sceneID="3l0-II-9X3">
+            <objects>
+                <viewController id="PVF-ci-YvH" customClass="CongratulationViewController" customModule="Tests" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fBC-SF-Zf8">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="s7M-hL-rjw"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Sis-s8-nbO"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ToZ-8j-avF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="977" y="127"/>
+        </scene>
+    </scenes>
+</document>
